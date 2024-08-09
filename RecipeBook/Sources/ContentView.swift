@@ -1,17 +1,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.locale) var locale
+    
+    @EnvironmentObject private var themeManager: ThemeManager
     
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+        TabView {
+            // TODO: Implement me
+        }
     }
 }
 
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(ThemeManager.shared)
     }
 }
